@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    background-color: #FFFDF0;
+    font-family: "Montserrat", serif;
+}
+a{
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 20px;
+    width: 100%;
+    /* Makes the button wide */
+    max-width: 400px;
+    /* Limits max width */
+    border-radius: 30px;
+    /* Rounded corners */
+    font-size: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    /* Removes underline for links */
+    color: #333;
+    /* Neutral text color */
+    background-color: #D9DFC6;
+    /* Primary button background */
+    border: 1px solid #D9DFC6;
+    /* Border matches palette */
+    transition: all 0.3s ease-in-out;
+
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #EFF3EA;
+    /* Light hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+.header {
+    background-color: #D9DFC6;
+    margin-top: 0%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #A9B08E;
+}
+/* Primary */
+.bg-primary {
+    background-color: #D9DFC6;
+    /* Light Olive */
+}
+
+/* Secondary */
+.bg-secondary {
+    background-color: #FFFDF0;
+    /* Cream White */
+}
+
+/* Accent */
+.bg-accent {
+    background-color: #EFF3EA;
+    /* Pale Green */
+}
+
+/* Highlight */
+.bg-highlight {
+    background-color: #FFF2C2;
+    /* Soft Yellow */
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #D9DFC6;
+    padding: 15px;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    border-top: 2px solid #FFF2C2;
+}
+.center{
+    text-align: center;
+}
