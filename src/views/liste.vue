@@ -1,11 +1,11 @@
 <template>
   <div>
     <header class="head bg-primary">
-      <a href="/" class="back-button">← Back</a>
+      <a href="/" class="back-button">← Geri</a>
       <h1 class="header-title">Student Performances</h1>
     </header>
     <ul class="hkm">
-      <li v-for="(student, name) in students" :key="name">
+      <li v-for="(student, name) in json" :key="name">
         <h2>{{ name }}</h2>
         <p><strong>Instrument:</strong> {{ student.instrument }}</p>
         <ul>
@@ -34,7 +34,7 @@
 export default {
   data() {
     return {
-      students: {
+      json: {
         "Deniz Gürşen": {
           "instrument": "Piano",
           "pieces": [
@@ -244,7 +244,7 @@ p {
 .head {
   display: flex;
   align-items: center;
-
+  
   padding: 10px 15px;
   border-bottom: 1px solid #ddd;
 }

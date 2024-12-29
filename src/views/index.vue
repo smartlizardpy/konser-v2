@@ -5,7 +5,7 @@
 <template>
   <div class="header">
     <h1>Piyano Ve Keman Konseri</h1>
-    <p>Canlı yayını izlemek için <a href="#"> tıklayın </a></p>
+    <p>Canlı yayını izlemek için <a href="live"> tıklayın </a></p>
   </div>
 
 
@@ -13,7 +13,7 @@
     <h1 class="greet">Hoşgeldiniz</h1>
     <a class="btn" href="/liste">Öğrenci Listesi</a>
     <a class="btn" href="/live"> Canlı Yayın</a>
-
+    <a class="btn" href="/map"> Nasıl Giderim?</a>
 
   </div>
   <div class="footer bg-primary">

@@ -6,8 +6,7 @@
     </div>
     <h1 class="center text">Canlı Yayın</h1>
     <div class="video">
-        <iframe id="videoIframe" src="https://vdo.ninja/?view=qV4XS4K"></iframe>
-        <button class="fullscreen-btn" @click="toggleFullScreen">Tam Ekran</button>
+        <iframe id="videoIframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
     </div>
 
     <div class="footer bg-primary">
@@ -17,22 +16,7 @@
 
 <script>
 export default {
-    methods: {
-        toggleFullScreen() {
-            const iframe = document.getElementById('videoIframe');
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.mozRequestFullScreen) { // Firefox
-                iframe.mozRequestFullScreen();
-            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.msRequestFullscreen) { // IE/Edge
-                iframe.msRequestFullscreen();
-            } else {
-                window.location.href = iframe.src;
-            }
-        }
-    }
+    // No methods needed as fullscreen functionality is removed
 };
 </script>
 
@@ -72,24 +56,6 @@ iframe {
     border: none;
 }
 
-.fullscreen-btn {
-    margin-top: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-    width: 90%;
-    max-width: 200px;
-}
-
-.fullscreen-btn:hover {
-    background-color: #0056b3;
-}
-
 .footer {
     text-align: center;
     padding: 10px;
@@ -109,11 +75,6 @@ iframe {
     .back {
         font-size: 14px;
         padding: 8px 15px;
-    }
-
-    .fullscreen-btn {
-        font-size: 12px;
-        padding: 8px 12px;
     }
 
     iframe {
