@@ -1,9 +1,16 @@
 <template>
   <div>
+    <!-- Fixed Header -->
     <header class="head bg-primary">
       <a href="/" class="back-button">← Geri</a>
       <h1 class="header-title">Student Performances</h1>
+      <a href="https://chatgpt.com/g/g-6759c59c545081919a5d4d18fcd844f7-concert-gpt" class="ai-button" target="_blank"
+        rel="noopener noreferrer">
+        Need Help?
+      </a>
     </header>
+
+    <!-- The main content -->
     <ul class="hkm">
       <li v-for="(student, name) in json" :key="name">
         <h2>{{ name }}</h2>
@@ -21,205 +28,170 @@
         </ul>
       </li>
     </ul>
-  </div>
-  <div class="footer bg-primary">
-    <p> Made With ❤️ by Ozan Kaygusuz</p>
+
+    <div class="footer bg-primary">
+      <p>Made With ❤️ by Ozan Kaygusuz</p>
+    </div>
   </div>
 </template>
-<script setup>
 
-
-</script>
 <script>
 export default {
   data() {
     return {
       json: {
-        "Deniz Gürşen": {
-          "instrument": "Piano",
+        "Güneş Demir & Ateş Demir": {
+          "instrument": "Piano Duet",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Mary Had A Little Lamb", "accompanist": "Defne Gürşen" },
-            { "composer": "J. Thompson", "piece": "Yankee Doodle" }
+            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Aura Lee" }
           ]
         },
-        "Mira Çongara": {
+        "Alin Diktaş": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Bells" }
+            { "composer": "Anonymous", "piece": "Flea Waltz" }
           ]
         },
-        "Nazlıhan Çakıroğlu": {
+        "Neşe Okan": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Old MacDonald" }
+            { "composer": "J. Thompson", "piece": "Kızılderili Davulu" },
+            { "composer": "J. Offenbach", "piece": "Barkarole" }
           ]
         },
-        "Aslıhan Çakıroğlu": {
+        "Alya İnce": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Mary Had A Little Lamb" },
-            { "composer": "S. Suzuki", "piece": "Twinkle Twinkle Little Star (4 El)" }
+            { "composer": "J. Thompson", "piece": "Dansçı Ayı" },
+            { "composer": "J. Thompson", "piece": "London Bridge" },
+            { "composer": "J. Thompson", "piece": "Neşeli Hindi" },
+            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Yankee Doodle", "accompanist": "Aras İnce" }
           ]
         },
-        "Mete Erberdi": {
+        "Beren Susuzlu": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Offenbach", "piece": "Barkarole" },
-            { "composer": "A. Ifukube", "piece": "Godzilla (Main Theme)" }
+            { "composer": "J. Thompson", "piece": "Kızılderili Davulu" },
+            { "composer": "Traditional", "piece": "When the Saints Go Marchin’ in" },
+            { "composer": "French Folk Song", "piece": "Alouette (Piano Duet)" }
           ]
         },
         "Özgü Lena Ferhanoğlu": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Old MacDonald" },
-            { "composer": "J. Offenbach", "piece": "Can Can" }
+            { "composer": "W.A. Mozart", "piece": "Andante grazioso" },
+            { "composer": "M.A. Charpentier", "piece": "Prelude" }
           ]
         },
-        "Layra Bayraktar": {
+        "Asya Geniş": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "Anonymous", "piece": "Happy Birthday Song" }
+            { "composer": "Traditional (Arr.H.G. Heumann)", "piece": "Sailor" }
           ]
         },
-        "Defne Bilge Ateş": {
+        "Defne İlter": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Row, Row" },
-            { "composer": "J. Thompson", "piece": "Gün Doğarken" }
-          ]
-        },
-        "Selin Acer": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "J. Thompson", "piece": "Ten Little Indians" },
-            { "composer": "L. V. Beethoven", "piece": "Ode to Joy" }
-          ]
-        },
-        "Noyan Okan": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "J. Thompson", "piece": "Gayda Çalgıcıları" },
-            { "composer": "Anonymous", "piece": "Flea Waltz" }
+            { "composer": "Traditional", "piece": "When the Saints Go Marchin’ in" },
+            { "composer": "J.S. Bach", "piece": "Musette" }
           ]
         },
         "Güneş Demir": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "German Folk Song", "piece": "Lightly Row" },
-            { "composer": "Y. Johnson", "piece": "Dance For Two", "accompanist": "Ateş Demir" }
+            { "composer": "J. Strauss", "piece": "Radetzky March" },
+            { "composer": "J. Offenbach", "piece": "Cancan" }
+          ]
+        },
+        "Selin Acer": {
+          "instrument": "Piano",
+          "pieces": [
+            { "composer": "Traditional", "piece": "Santa Lucia" },
+            { "composer": "L.W. Beethoven", "piece": "Für Elise" }
+          ]
+        },
+        "Aram Ronas Çetin": {
+          "instrument": "Piano",
+          "pieces": [
+            { "composer": "Traditional", "piece": "Morning Has Broken" },
+            { "composer": "L.V. Beethoven", "piece": "Ode to Joy (9th Symphony)" }
+          ]
+        },
+        "Defne Bilge Ateş": {
+          "instrument": "Piano",
+          "pieces": [
+            { "composer": "J. Strauss", "piece": "The Blue Danube Waltz" },
+            { "composer": "W.A. Mozart", "piece": "Vivat Bacchus, Bacchus lebe" },
+            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Polly Wolly Doodle (Piano Duet)" }
           ]
         },
         "Doğa Adebalı": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. Thompson", "piece": "Bir Varmış Bir Yokmuş" },
-            { "composer": "A. Diabelli", "piece": "Piano Duet Opus 149 No: 6" }
+            { "composer": "J. Strauss", "piece": "Waltz Op.39 No.15" },
+            { "composer": "G. Verdi", "piece": "La Donna e Mobile (Rigoletto)" }
           ]
         },
-        "Lara Aybar & Defne Gürşen": {
-          "instrument": "Piano and Violin",
-          "pieces": [
-            { "composer": "S. Suzuki", "piece": "Twinkle Twinkle Variation A" }
-          ]
-        },
-        "Ahmet Kartal Çakıroğlu": {
+        "Aras İnce": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "J. S. Bach", "piece": "Musette" }
+            { "composer": "W.A. Mozart", "piece": "Dance in F Major" },
+            { "composer": "W.A. Mozart", "piece": "Rondo Alla Turca" }
           ]
         },
-        "İpek Gedik": {
-          "instrument": "Piano",
+        "Lara Aybar": {
+          "instrument": "Violin",
           "pieces": [
-            { "composer": "Anonymous", "piece": "Flea Waltz" }
+            { "composer": "S. Suzuki", "piece": "Long Long Ago" }
           ]
         },
-        "İpek Kuru": {
+        "Layra Bayraktar": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "S. Suzuki", "piece": "Allegro" }
+            { "composer": "W.A. Mozart", "piece": "Eine Kleine Nachtmusik" },
+            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Little Brown Jug", "accompanist": "Defne Kaygusuz" }
           ]
         },
         "Defne Kaygusuz": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "W.A. Mozart", "piece": "Andante Grazioso" },
-            { "composer": "A. Diabelli", "piece": "Piano Duet Op.149 No: 5" }
+            { "composer": "P.I. Tchaikovsky", "piece": "The Swan Lake" },
+            { "composer": "R. Schumann", "piece": "Wild Rider" }
           ]
         },
-        "Defne Uluçay": {
+        "Noyan Okan": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "Traditional", "piece": "When the Saints Go Marchin’ in" },
-            { "composer": "L. V. Beethoven", "piece": "Ode to Joy" }
-          ]
-        },
-        "Elif Beyza Yılmaz": {
-          "instrument": "Keman",
-          "pieces": [
-            { "composer": "S. Suzuki", "piece": "Lightly Row" },
-            { "composer": "S. Suzuki", "piece": "Song of the Wind" }
-          ]
-        },
-        "Mehmet Cem Öztürk": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "J. Strauss", "piece": "Radetzky March" }
-          ]
-        },
-        "Mira Cığızoğlu": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "W. A. Mozart", "piece": "Eine Kleine Nachtmusik" }
-          ]
-        },
-        "Defne Gürşen": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "W. A. Mozart", "piece": "Rondo alla Turca" }
-          ]
-        },
-        "Lara Aybar": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "L. V. Beethoven", "piece": "Für Elise" },
-            { "composer": "J. Brahms", "piece": "Hungarian Dance" }
+            { "composer": "W.A. Mozart", "piece": "Rondo Alla Turca" }
           ]
         },
         "Ateş Demir": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "L. V. Beethoven", "piece": "Sonatina in G Major" }
+            { "composer": "J.S. Bach", "piece": "Prelude in C Major" },
+            { "composer": "T. Fox (Arr. Manel Navola)", "piece": "Undertale – Megalovania" }
           ]
         },
-        "Ayka Blazhenkova": {
-          "instrument": "Violin",
-          "pieces": [
-            { "composer": "J. S. Bach", "piece": "Gavotte in G Minor", "accompanist": "Ateş Demir" },
-            { "composer": "K. Bohm", "piece": "Perpetual Motion - Little Suite No.6" }
-          ]
-        },
-        "Lina Göğüş": {
+        "İpek Kuru": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "R. Schumann", "piece": "Wild Rider" },
-            { "composer": "E. Grinko", "piece": "Valse" }
+            { "composer": "H.G. Heumann", "piece": "Mazurka" }
+          ]
+        },
+        "Dila Okay & İpek Kuru": {
+          "instrument": "Piano Duet",
+          "pieces": [
+            { "composer": "R. Djawadi", "piece": "Game of Thrones Theme" }
           ]
         },
         "Dila Okay": {
           "instrument": "Piano",
           "pieces": [
-            { "composer": "F. Chopin", "piece": "Waltz in A Minor, B 150" }
-          ]
-        },
-        "Mina Nehir Tekin": {
-          "instrument": "Piano",
-          "pieces": [
-            { "composer": "J. S. Bach", "piece": "Prelude No:3 from 12 Short Preludes" },
-            { "composer": "W. A. Mozart", "piece": "Sonata No.16, in C Major, K 545" }
+            { "composer": "W.A. Mozart", "piece": "Fantasia in D Minor, KV.397, No.1" }
           ]
         }
       }
+
 
     };
   }
@@ -227,51 +199,174 @@ export default {
 
 
 </script>
-
 <style scoped>
-h1 {
-  text-align: center;
-}
-
-h2 {
-  color: #2c3e50;
-}
-
-p {
-  margin: 5px 0;
-}
-
+/* Make the header fixed */
 .head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  /* so it stays on top of other elements */
   display: flex;
   align-items: center;
-  
-  padding: 10px 15px;
-  border-bottom: 1px solid #ddd;
+  background-color: #007bff;
+  /* or use your .bg-primary color */
+  padding: 10px;
+  color: #fff;
+  /* optional: add shadow or borders if you like */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Back link to the left */
 .back-button {
-  background-color: #FFF2C2;
-  color: rgb(2, 0, 0);
-  border: none;
-  border-radius: 4px;
-  padding: 8px 12px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-right: 15px;
-  transition: background-color 0.3s;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
 }
 
-.back-button:hover {
-  background-color: #ffe483;
-}
-
+/* Header title grows to fill the space, pushing .ai-button to the right */
 .header-title {
-  font-size: 20px;
-  font-weight: bold;
+  flex: 1;
   margin: 0;
-  color: #333;
+  font-size: 1.25rem;
 }
-.hkm{
-  margin-bottom: 3cm;
+
+/* "Need Help?" button to the right */
+.ai-button {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 16px;
+  color: #fff;
+  background: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+
+  /* Pulse Glow Animation on the button itself */
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Glowing gradient overlay behind the button */
+.ai-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 30px;
+  background: linear-gradient(120deg,
+      #2ecc71,
+      #9b59b6,
+      #3498db,
+      #e74c3c,
+      #f1c40f,
+      #2ecc71);
+  background-size: 400% 400%;
+  z-index: -2;
+  opacity: 0.8;
+  /* Slightly higher for a bolder glow */
+  animation: gradientFlow 5s linear infinite;
+  /* Slower or faster as desired */
+}
+
+/* Solid center area inside the gradient border */
+.ai-button::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border-radius: 26px;
+  background: #111;
+  z-index: -1;
+}
+
+/* Hover effect: you can change text color or other properties */
+.ai-button:hover {
+  color: #fff;
+}
+
+/* Keyframes for the animated gradient */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 100%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 0%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Keyframes for the pulsing glow effect around the button */
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* -------------------------------------------------
+   Optional Mobile-Friendly Adjustments (Smaller)
+   ------------------------------------------------- */
+@media (max-width: 576px) {
+  .ai-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 24px;
+  }
+
+  .ai-button::before {
+    border-radius: 24px;
+  }
+
+  .ai-button::after {
+    border-radius: 20px;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+  }
+}
+/* Because the header is fixed, add top padding to your main content */
+.hkm {
+  /* adjust based on your header’s height */
+  padding-top: 60px;
+  list-style: none;
+  margin: 0;
+  margin-bottom:6rem;
+}
+
+/* Optional footer styling */
+.footer {
+  margin-top: 12rem;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
 }
 </style>

@@ -6,7 +6,10 @@
     </div>
     <h1 class="center text">Canlı Yayın</h1>
     <div class="video">
-        <iframe id="videoIframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GVRKfYM6LtA?si=-nRfZKzlj-cFBqMT"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     <div class="footer bg-primary">
