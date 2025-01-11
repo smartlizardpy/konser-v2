@@ -4,7 +4,7 @@
 
 <template>
   <div class="header">
-    <h1>Piyano Ve Keman Konseri</h1>
+    <h1 class="x"><span class="c">İzlem Bayraktar </span> ve Öğrencilerinin Piyano Ve Keman Konseri</h1>
     <p>Canlı yayını izlemek için <a href="live"> tıklayın </a></p>
   </div>
 
@@ -67,5 +67,11 @@
     font-size: 14px;
     padding: 10px;
   }
+}
+.x{
+  font-size: 20px;
+}
+.c{
+  color: #1a2b3c;
 }
 </style>
