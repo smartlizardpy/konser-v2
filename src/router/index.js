@@ -12,26 +12,27 @@ const router = createRouter({
     {
       path: '/liste',
       name: 'liste',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/liste.vue'),
     },
     {
       path: '/live',
       name: 'canlı-yayın',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/live.vue'),
     },
-     {
+    {
       path: '/map',
       name: 'harita',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/map.vue'),
+    },
+    {
+      path: '/student/:name',
+      name: 'student',
+      component: () => import('../views/student.vue'),
+    },
+    {
+      path: '/student',
+      name: 'student_page without name',
+      component: () => import('../views/student.vue'),
     },
   ],
 })

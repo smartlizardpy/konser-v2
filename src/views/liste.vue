@@ -14,6 +14,7 @@
     <ul class="hkm">
       <li v-for="(student, name) in json" :key="name">
         <h2>{{ name }}</h2>
+        <a :href="'/student' + '/' + student.id">Öğrenci Detaylarını Görüntüle →</a>
         <p><strong>Instrument:</strong> {{ student.instrument }}</p>
         <ul>
           <li v-for="(piece, index) in student.pieces" :key="index">
@@ -24,6 +25,7 @@
                 <br /><strong>Accompanist:</strong> {{ piece.accompanist }}
               </span>
             </p>
+
           </li>
         </ul>
       </li>
@@ -41,18 +43,21 @@ export default {
     return {
       json: {
         "Güneş Demir & Ateş Demir": {
+          "id": "st_231",
           "instrument": "Piano Duet",
           "pieces": [
             { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Aura Lee" }
           ]
         },
         "Alin Diktaş": {
+          "id": "st_542",
           "instrument": "Piano",
           "pieces": [
             { "composer": "Anonymous", "piece": "Flea Waltz" }
           ]
         },
         "Neşe Okan": {
+          "id": "st_873",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J. Thompson", "piece": "Kızılderili Davulu" },
@@ -60,6 +65,7 @@ export default {
           ]
         },
         "Alya İnce": {
+          "id": "st_124",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J. Thompson", "piece": "Dansçı Ayı" },
@@ -69,14 +75,16 @@ export default {
           ]
         },
         "Beren Susuzlu": {
+          "id": "st_665",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J. Thompson", "piece": "Kızılderili Davulu" },
-            { "composer": "Traditional", "piece": "When the Saints Go Marchin’ in" },
+            { "composer": "Traditional", "piece": "When the Saints Go Marchin' in" },
             { "composer": "French Folk Song", "piece": "Alouette (Piano Duet)" }
           ]
         },
         "Özgü Lena Ferhanoğlu": {
+          "id": "st_396",
           "instrument": "Piano",
           "pieces": [
             { "composer": "W.A. Mozart", "piece": "Andante grazioso" },
@@ -84,19 +92,22 @@ export default {
           ]
         },
         "Asya Geniş": {
+          "id": "st_947",
           "instrument": "Piano",
           "pieces": [
             { "composer": "Traditional (Arr.H.G. Heumann)", "piece": "Sailor" }
           ]
         },
         "Defne İlter": {
+          "id": "st_218",
           "instrument": "Piano",
           "pieces": [
-            { "composer": "Traditional", "piece": "When the Saints Go Marchin’ in" },
+            { "composer": "Traditional", "piece": "When the Saints Go Marchin' in" },
             { "composer": "J.S. Bach", "piece": "Musette" }
           ]
         },
         "Güneş Demir": {
+          "id": "st_759",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J. Strauss", "piece": "Radetzky March" },
@@ -104,6 +115,7 @@ export default {
           ]
         },
         "Selin Acer": {
+          "id": "st_480",
           "instrument": "Piano",
           "pieces": [
             { "composer": "Traditional", "piece": "Santa Lucia" },
@@ -111,6 +123,7 @@ export default {
           ]
         },
         "Aram Ronas Çetin": {
+          "id": "st_311",
           "instrument": "Piano",
           "pieces": [
             { "composer": "Traditional", "piece": "Morning Has Broken" },
@@ -118,6 +131,7 @@ export default {
           ]
         },
         "Defne Bilge Ateş": {
+          "id": "st_632",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J. Strauss", "piece": "The Blue Danube Waltz" },
@@ -126,6 +140,7 @@ export default {
           ]
         },
         "Doğa Adebalı": {
+          "id": "st_853",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J. Strauss", "piece": "Waltz Op.39 No.15" },
@@ -133,6 +148,7 @@ export default {
           ]
         },
         "Aras İnce": {
+          "id": "st_174",
           "instrument": "Piano",
           "pieces": [
             { "composer": "W.A. Mozart", "piece": "Dance in F Major" },
@@ -140,12 +156,14 @@ export default {
           ]
         },
         "Lara Aybar": {
+          "id": "st_595",
           "instrument": "Violin",
           "pieces": [
             { "composer": "S. Suzuki", "piece": "Long Long Ago" }
           ]
         },
         "Layra Bayraktar": {
+          "id": "st_916",
           "instrument": "Piano",
           "pieces": [
             { "composer": "W.A. Mozart", "piece": "Eine Kleine Nachtmusik" },
@@ -153,6 +171,7 @@ export default {
           ]
         },
         "Defne Kaygusuz": {
+          "id": "st_437",
           "instrument": "Piano",
           "pieces": [
             { "composer": "P.I. Tchaikovsky", "piece": "The Swan Lake" },
@@ -160,12 +179,14 @@ export default {
           ]
         },
         "Noyan Okan": {
+          "id": "st_758",
           "instrument": "Piano",
           "pieces": [
             { "composer": "W.A. Mozart", "piece": "Rondo Alla Turca" }
           ]
         },
         "Ateş Demir": {
+          "id": "st_279",
           "instrument": "Piano",
           "pieces": [
             { "composer": "J.S. Bach", "piece": "Prelude in C Major" },
@@ -173,18 +194,21 @@ export default {
           ]
         },
         "İpek Kuru": {
+          "id": "st_890",
           "instrument": "Piano",
           "pieces": [
             { "composer": "H.G. Heumann", "piece": "Mazurka" }
           ]
         },
         "Dila Okay & İpek Kuru": {
+          "id": "st_111",
           "instrument": "Piano Duet",
           "pieces": [
             { "composer": "R. Djawadi", "piece": "Game of Thrones Theme" }
           ]
         },
         "Dila Okay": {
+          "id": "st_732",
           "instrument": "Piano",
           "pieces": [
             { "composer": "W.A. Mozart", "piece": "Fantasia in D Minor, KV.397, No.1" }
