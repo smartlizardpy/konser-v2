@@ -93,7 +93,6 @@ export default {
           "id": "st_88812",
           "instrument": "Piano",
           "pieces": [
-            { "composer": "American Folk Song (Arr.H.G.HEUMANN)", "piece": "Polly Wolly Doodle" },
             { "composer": "Traditional (Arr.H.G.HEUMANN)", "piece": "Sailor" },
             { "composer": "W.A. MOZART", "piece": "Champagne Aria from “Don Giovanni”" }
           ]
