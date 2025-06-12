@@ -4,7 +4,8 @@
             <h3><span class="highlight">İzlem Bayraktar</span> ve Öğrencilerinin Piyano Ve Keman Konseri</h3>
 
         </div>
-        <h1 class="center name">{{ $route.hash ? Object.entries(json).find(([_, data]) => data.id === decodeURIComponent($route.hash.substring(1)))?.[0] : '' }}</h1>
+        <h1 class=" name">{{ $route.params.name ? Object.entries(json).find(([_, data]) => data.id === $route.params.name)?.[0] : '' }}</h1>
+    
         <h2 class="center">Enstrüman: {{ instrument }} {{ instrument === 'Piano' ? '🎹' : instrument === 'Violin' ? '🎻' : instrument === 'Piano Duet' ? '🎹' : '🎹' }}</h2>
 
         <div class="songs">
@@ -27,179 +28,181 @@
 </template>
 <script>
 const json = {
-    "Güneş Demir & Ateş Demir": {
-        "id": "st_231",
+    "Alya & Aras İnce": {
+        "id": "st_10234",
         "instrument": "Piano Duet",
         "pieces": [
-            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Aura Lee" }
+            { "composer": "L. V. BEETHOVEN (Arr.H.G.HEUMANN)", "piece": "Turkish March" }
         ]
     },
-    "Alin Diktaş": {
-        "id": "st_542",
+    "Mehmet Kaan Koç": {
+        "id": "st_37429",
         "instrument": "Piano",
         "pieces": [
+            { "composer": "J. THOMPSON", "piece": "Mary had a little lamb" },
             { "composer": "Anonymous", "piece": "Flea Waltz" }
         ]
     },
-    "Neşe Okan": {
-        "id": "st_873",
+    "Alin Diktaş": {
+        "id": "st_49283",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "J. Thompson", "piece": "Kızılderili Davulu" },
-            { "composer": "J. Offenbach", "piece": "Barkarole" }
+            { "composer": "Traditional", "piece": "Lightly Row" }
+        ]
+    },
+    "Neşe Okan": {
+        "id": "st_58293",
+        "instrument": "Piano",
+        "pieces": [
+            { "composer": "Traditional", "piece": "When the Saints Go Marchin’ in" },
+            { "composer": "J.S. BACH", "piece": "Musette" }
         ]
     },
     "Alya İnce": {
-        "id": "st_124",
+        "id": "st_39483",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "J. Thompson", "piece": "Dansçı Ayı" },
-            { "composer": "J. Thompson", "piece": "London Bridge" },
-            { "composer": "J. Thompson", "piece": "Neşeli Hindi" },
-            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Yankee Doodle", "accompanist": "Aras İnce" }
+            { "composer": "L. V. BEETHOVEN", "piece": "Ode to Joy 9th Symphony" },
+            { "composer": "L. V. BEETHOVEN", "piece": "Für Elise" }
         ]
     },
     "Beren Susuzlu": {
-        "id": "st_665",
+        "id": "st_11238",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "J. Thompson", "piece": "Kızılderili Davulu" },
-            { "composer": "Traditional", "piece": "When the Saints Go Marchin' in" },
-            { "composer": "French Folk Song", "piece": "Alouette (Piano Duet)" }
+            { "composer": "W.A. MOZART", "piece": "Andante grazioso" },
+            { "composer": "Albinoni", "piece": "Adagio" },
+            { "composer": "S.C. FOSTER (Arr.H.G.HEUMANN)", "piece": "Oh Susanna" }
         ]
     },
     "Özgü Lena Ferhanoğlu": {
-        "id": "st_396",
+        "id": "st_88812",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "W.A. Mozart", "piece": "Andante grazioso" },
-            { "composer": "M.A. Charpentier", "piece": "Prelude" }
+            { "composer": "American Folk Song (Arr.H.G.HEUMANN)", "piece": "Polly Wolly Doodle" },
+            { "composer": "Traditional (Arr.H.G.HEUMANN)", "piece": "Sailor" },
+            { "composer": "W.A. MOZART", "piece": "Champagne Aria from “Don Giovanni”" }
         ]
     },
     "Asya Geniş": {
-        "id": "st_947",
+        "id": "st_71624",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "Traditional (Arr.H.G. Heumann)", "piece": "Sailor" }
+            { "composer": "G. VERDI", "piece": "La Donna e Mobile “Rigoletto”" }
         ]
     },
     "Defne İlter": {
-        "id": "st_218",
+        "id": "st_93812",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "Traditional", "piece": "When the Saints Go Marchin' in" },
-            { "composer": "J.S. Bach", "piece": "Musette" }
+            { "composer": "J. STRAUSS", "piece": "Radetzky March" },
+            { "composer": "J. OFFENBACH", "piece": "Cancan" }
+        ]
+    },
+    "Ela Bayrak": {
+        "id": "st_27182",
+        "instrument": "Violin",
+        "pieces": [
+            { "composer": "S. Suzuki", "piece": "Song of the Wind" },
+            { "composer": "S. Suzuki", "piece": "Go Tell Aunt Rhody" },
+            { "composer": "S. Suzuki", "piece": "O Come Little Children" }
         ]
     },
     "Güneş Demir": {
-        "id": "st_759",
+        "id": "st_83471",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "J. Strauss", "piece": "Radetzky March" },
-            { "composer": "J. Offenbach", "piece": "Cancan" }
+            { "composer": "L.W. BEETHOVEN", "piece": "Für Elise" },
+            { "composer": "W.A. MOZART", "piece": "Rondo" },
+            { "composer": "American Folksong (Arr.H.G.HEUMANN)", "piece": "Little Brown Jug" }
         ]
     },
-    "Selin Acer": {
-        "id": "st_480",
+    "Zeynep Öner": {
+        "id": "st_47821",
         "instrument": "Piano",
         "pieces": [
             { "composer": "Traditional", "piece": "Santa Lucia" },
-            { "composer": "L.W. Beethoven", "piece": "Für Elise" }
+            { "composer": "W.A. MOZART", "piece": "The Marriage of Figaro" },
+            { "composer": "A. Diabelli", "piece": "Piano Duet Opus 149 No: 6" }
         ]
     },
-    "Aram Ronas Çetin": {
-        "id": "st_311",
+    "Selin Acer": {
+        "id": "st_34912",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "Traditional", "piece": "Morning Has Broken" },
-            { "composer": "L.V. Beethoven", "piece": "Ode to Joy (9th Symphony)" }
+            { "composer": "Traditional (Arr.H.G.HEUMANN)", "piece": "Sailor" },
+            { "composer": "Anonymous", "piece": "Tarantella Napolitana" }
         ]
     },
-    "Defne Bilge Ateş": {
-        "id": "st_632",
-        "instrument": "Piano",
-        "pieces": [
-            { "composer": "J. Strauss", "piece": "The Blue Danube Waltz" },
-            { "composer": "W.A. Mozart", "piece": "Vivat Bacchus, Bacchus lebe" },
-            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Polly Wolly Doodle (Piano Duet)" }
-        ]
-    },
-    "Doğa Adebalı": {
-        "id": "st_853",
-        "instrument": "Piano",
-        "pieces": [
-            { "composer": "J. Strauss", "piece": "Waltz Op.39 No.15" },
-            { "composer": "G. Verdi", "piece": "La Donna e Mobile (Rigoletto)" }
-        ]
-    },
-    "Aras İnce": {
-        "id": "st_174",
-        "instrument": "Piano",
-        "pieces": [
-            { "composer": "W.A. Mozart", "piece": "Dance in F Major" },
-            { "composer": "W.A. Mozart", "piece": "Rondo Alla Turca" }
-        ]
-    },
-    "Lara Aybar": {
-        "id": "st_595",
+    "Lara Aybar (Violin)": {
+        "id": "st_56564",
         "instrument": "Violin",
         "pieces": [
-            { "composer": "S. Suzuki", "piece": "Long Long Ago" }
+            { "composer": "S. Suzuki", "piece": "Allegro" }
+        ]
+    },
+    "Doğa Adebali": {
+        "id": "st_10294",
+        "instrument": "Piano",
+        "pieces": [
+            { "composer": "L.W. BEETHOVEN", "piece": "Küçük Rondo" },
+            { "composer": "M.A. Charpentier", "piece": "Prelude" }
         ]
     },
     "Layra Bayraktar": {
-        "id": "st_916",
+        "id": "st_78361",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "W.A. Mozart", "piece": "Eine Kleine Nachtmusik" },
-            { "composer": "American Folk Song (Arr.H.G. Heumann)", "piece": "Little Brown Jug", "accompanist": "Defne Kaygusuz" }
+            { "composer": "F. Burgmüller", "piece": "La Tarantella" }
         ]
     },
     "Defne Kaygusuz": {
-        "id": "st_437",
+        "id": "st_21117",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "P.I. Tchaikovsky", "piece": "The Swan Lake" },
-            { "composer": "R. Schumann", "piece": "Wild Rider" }
+            { "composer": "J.S. BACH", "piece": "Prelude No.3, BWV 999" },
+            { "composer": "K. Chovan", "piece": "Gypsy Legend" }
         ]
     },
     "Noyan Okan": {
-        "id": "st_758",
+        "id": "st_67234",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "W.A. Mozart", "piece": "Rondo Alla Turca" }
+            { "composer": "M. Clementi", "piece": "Sonatine Op. 36. No. 1" }
+        ]
+    },
+    "Aras İnce": {
+        "id": "st_33983",
+        "instrument": "Piano",
+        "pieces": [
+            { "composer": "Y. Kimura", "piece": "Always With Me" },
+            { "composer": "W.A. MOZART", "piece": "Allegro in F, K15" }
+        ]
+    },
+    "Lara Aybar (Piano)": {
+        "id": "st_11728",
+        "instrument": "Piano",
+        "pieces": [
+            { "composer": "H. Zimmer", "piece": "Pirates of the Caribbean" }
         ]
     },
     "Ateş Demir": {
-        "id": "st_279",
+        "id": "st_84328",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "J.S. Bach", "piece": "Prelude in C Major" },
-            { "composer": "T. Fox (Arr. Manel Navola)", "piece": "Undertale – Megalovania" }
-        ]
-    },
-    "İpek Kuru": {
-        "id": "st_890",
-        "instrument": "Piano",
-        "pieces": [
-            { "composer": "H.G. Heumann", "piece": "Mazurka" }
-        ]
-    },
-    "Dila Okay & İpek Kuru": {
-        "id": "st_111",
-        "instrument": "Piano Duet",
-        "pieces": [
-            { "composer": "R. Djawadi", "piece": "Game of Thrones Theme" }
+            { "composer": "F. Chopin", "piece": "Waltz in A Minor, No.19" },
+            { "composer": "D. Brubeck", "piece": "Take Five" }
         ]
     },
     "Dila Okay": {
-        "id": "st_732",
+        "id": "st_30128",
         "instrument": "Piano",
         "pieces": [
-            { "composer": "W.A. Mozart", "piece": "Fantasia in D Minor, KV.397, No.1" }
+            { "composer": "S. Rachmaninoff", "piece": "Prelude C sharp minor, Op.3, No.2" }
         ]
     }
 }
+
     
 export default {
     data() {
@@ -239,7 +242,7 @@ export default {
     }
 
     .name {
-        font-size: 1.4rem;
+        font-size: 1.9rem;
     }
 
     .center {
@@ -290,9 +293,11 @@ export default {
 }
 
 .name {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-top: 8%;
     word-wrap: break-word;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 .center {
