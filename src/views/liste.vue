@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Fixed Header -->
+    
     <header class="head bg-primary">
       <a href="/" class="back-button">← Geri</a>
       <h1 class="header-title">Student Performances</h1>
@@ -10,7 +10,7 @@
       </a>
     </header>
 
-    <!-- The main content -->
+
     <ul class="hkm">
       <li v-for="(student, name) in json" :key="name">
         <h2>{{ name }}</h2>
